@@ -1,5 +1,5 @@
-# javascript/hello-world/.exercism
-# javascript/two-fer/.exercism
+javascript/hello-world/.exercism
+javascript/two-fer/.exercism
 javascript/hello-world/node_modules
 javascript/hello-world/package*
-*-lock.json
+package*
