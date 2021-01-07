@@ -11,13 +11,9 @@ A: 'U'
 }
 
 export const toRna = (dna) => {
-  if (dna) {
     let RNA = ''
     for(var char of dna){
       RNA += DNA[char];
     }
     return RNA
-  } else {
-    return ''
-  }
 };
