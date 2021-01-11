@@ -10,6 +10,7 @@ javascript/space-age/node_modules
 javascript/pangram/node_modules
 javascript/bank-account/node_modules
 javascript/matrix/node_modules
+javascript/leap/node_modules
 
 javascript/hello-world/package*
 package*
