@@ -12,6 +12,7 @@ javascript/bank-account/node_modules
 javascript/matrix/node_modules
 javascript/leap/node_modules
 javascript/reverse-string/node_modules
+javascript/collatz-conjecture/node_modules
 
 javascript/hello-world/package*
 package*
