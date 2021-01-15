@@ -14,6 +14,7 @@ javascript/leap/node_modules
 javascript/reverse-string/node_modules
 javascript/collatz-conjecture/node_modules
 javascript/triangle/node_modules
+javascript/etl/node_modules
 
 javascript/hello-world/package*
 package*
