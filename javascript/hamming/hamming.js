@@ -16,12 +16,10 @@ export const compute =(strand1,strand2) => {
     if(strand1.length !== strand2.length){
       throw new Error('left and right strands must be of equal length')
     }
-      let strand1Array = Array.from(strand1);
  
-      let strand2Array = Array.from(strand2);
       let diff = 0
-      for(let letter in strand1Array){
-        if(strand1Array[letter] !== strand2Array[letter])
+      for(let letter in strand1){
+        if(strand1[letter] !== strand2[letter])
           diff += 1
       }
     return diff
