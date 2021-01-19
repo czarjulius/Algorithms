@@ -18,6 +18,7 @@ javascript/etl/node_modules
 javascript/hamming/node_modules
 javascript/raindrops/node_modules
 javascript/word-count/node_modules
+javascript/difference-of-squares/node_modules
 
 javascript/hello-world/package*
 package*
