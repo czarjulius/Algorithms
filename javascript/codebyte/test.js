@@ -2,6 +2,14 @@ for (var i = 0; i < 3; i++) {
   setTimeout(function() { alert(i); }, 1000 + i);
 }
 
+const fibonacciSeries = (num)=>{
+  if(num <=1) return 1;
+  
+  return fibonacciSeries(num -1) + fibonacciSeries(num - 2)
+}
+
+fibonacciSeries(10)
+
 function FibonacciChecker(num) { 
   if(isSquare(5*(num*num) - 4) || isSquare(5*(num*num) +4)){
     return 'yes'
