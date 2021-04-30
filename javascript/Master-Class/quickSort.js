@@ -13,6 +13,7 @@ function pivotHelper(arr,start=0,end=arr.length-1) {
     swap(arr,start,swapIdx)
     return swapIdx;
   }
+  
   const quickSort = (arr, left=0, right=arr.length-1)=>{
     if(left < right)  {
       let pivotIdx = pivotHelper(arr, left, right)
