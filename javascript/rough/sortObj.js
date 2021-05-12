@@ -20,10 +20,10 @@ const cars = [
 ]
 const sortData = (cars)=>{
   const output = {}
-for(const {id, name, country} of cars){
-  if(!output[country]) output[country] = [];
-  output[country].push({id, name, country})
-}
+  for(const {id, name, country} of cars){
+    if(!output[country]) output[country] = [];
+    output[country].push({id, name, country})
+  }
   return Object.keys(output).sort().reduce((acc, currValue)=> (acc[currValue] = output[currValue], acc), {})
 }
 // console.log(sortData(cars))
