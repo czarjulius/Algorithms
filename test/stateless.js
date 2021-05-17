@@ -48,33 +48,31 @@ const promiseRetry = require('promise-retry');
   const REMOTE_RESOURCE_2_URL = 'http://example.com/api/resource2'
 
   _attemptUpdateRemoteAPI = ()=> {
-    const old_body_1 = { value: 'old1' };
-    const new_body_1 = { value: 'new1' };
-    const new_body_2 = { value: 'new2' };
+    const old_value_1 = { value: 'old1' };
+    const new_value_1 = { value: 'new1' };
+    const new_value_2 = { value: 'new2' };
 
     return promiseRetry({ retries: 3}, retry => {
-        return request.put({ url: REMOTE_RESOURCE_1_URL, body: new_body_1, json: true }, undefined)
+        return request.put({ url: REMOTE_RESOURCE_1_URL, body: new_value_1, json: true }, undefined)
         .catch(retry);
     })
     .catch(err => {
-        console.log(`Updating Resource 1 failed, aborting the updateRemoteApi() call`);
         return Promise.reject({
-            message: `updateRemoteApi() aborted!`
+            message: `abort update!`
         });
     })
-    .then(response => {
+    .then(res => {
         return promiseRetry({ retries: 3 }, retry => {
-            return request.put({ url: REMOTE_RESOURCE_2_URL, body: new_body_2, json: true }, undefined)
+            return request.put({ url: REMOTE_RESOURCE_2_URL, body: new_value_2, json: true }, undefined)
             .catch(retry);
         });
     })
     .catch(err => {
-        if(err.message === `updateRemoteApi() aborted!`)
+        if(err.message === `abort update!`)
             return Promise.reject(err);
         
-        console.log('Updating Resource 2 failed, rolling back resource 1');
         return promiseRetry({ retries: 3 }, retry => {
-            return request.put({ url: REMOTE_RESOURCE_1_URL, body: old_body_1, json: true }, undefined)
+            return request.put({ url: REMOTE_RESOURCE_1_URL, body: old_value_1, json: true }, undefined)
             .catch(retry);
         });
     });
@@ -85,4 +83,4 @@ const promiseRetry = require('promise-retry');
   }
 
 updateRemoteApi()
-.catch(err => console.log('end', err.message));
+.catch(err => console.log(err.message));
