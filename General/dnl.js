@@ -24,19 +24,23 @@
 //   frq[i] = ++frq[i] || 1;
 
 // }
-// var cars = [{'make':'audi','model':'r8','year':'2012'},{'make':'audi','model':'rs5','year':'2013'},{'make':'ford','model':'mustang','year':'2012'},{'make':'ford','model':'fusion','year':'2015'},{'make':'kia','model':'optima','year':'2012'},
-//             {'make':'kia','model':'optima','year':'2033'},
-//             {'make':null,'model':'zen','year':'2012'},
-//             {'make':null,'model':'blue','year':'2017'},
+var cars = [
+  { make: 'audi', model: 'r8', year: '2012' },
+  { make: 'audi', model: 'rs5', year: '2013' },
+  { make: 'ford', model: 'mustang', year: '2012' },
+  { make: 'ford', model: 'fusion', year: '2015' },
+  { make: 'kia', model: 'optima', year: '2012' },
+  { make: 'kia', model: 'optima', year: '2033' },
+  { make: null, model: 'zen', year: '2012' },
+  { make: null, model: 'blue', year: '2017' },
+];
 
-//            ];
-
-// const result = cars.reduce((r, a)=> {
-//         key = a.make || 'others';
-//         r[key] = r[key] || [];
-//         r[key].push(a);
-//         return r;
-//     }, {});
+const result = cars.reduce((r, a) => {
+  key = a.make || 'others';
+  r[key] = r[key] || [];
+  r[key].push(a);
+  return r;
+}, {});
 // const a1 = [2, 4, 6];
 // const a2 = [6, 4, 2];
 // const r = JSON.stringify(a1) === JSON.stringify(a2);
