@@ -17,8 +17,6 @@ const maxWaterContainer1 = (arr) => {
   return maxArea;
 };
 
-// ==== REFACTORED ====
-
 const maxWaterContainer2 = (arr) => {
   let maxArea = 0;
   let p1 = 0;
