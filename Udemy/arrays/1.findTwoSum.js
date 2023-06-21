@@ -16,19 +16,19 @@ const findTwoSum1 = (arr, target) => {
 
 // ==== REFACTORED ====
 
-const findTwoSum2 = (arr, target) => {
-  const numsMap = {};
-  for (let p1 = 0; p1 < arr.length; p1++) {
-    const currentMapVal = numsMap[arr[p1]];
-    if (currentMapVal >= 0) {
-      return [currentMapVal, p1];
-    } else {
-      const num_to_find = target - arr[p1];
-      numsMap[num_to_find] = p1;
-    }
-  }
-  return null;
-};
+// const findTwoSum2 = (arr, target) => {
+//   const numsMap = {};
+//   for (let p1 = 0; p1 < arr.length; p1++) {
+//     const currentMapVal = numsMap[arr[p1]];
+//     if (currentMapVal >= 0) {
+//       return [currentMapVal, p1];
+//     } else {
+//       const num_to_find = target - arr[p1];
+//       numsMap[num_to_find] = p1;
+//     }
+//   }
+//   return null;
+// };
 
 // ==== REFACTORED ====
 
