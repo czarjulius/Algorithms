@@ -32,14 +32,14 @@ const findTwoSum2 = (arr, target) => {
 
 // ==== REFACTORED ====
 
-const findTwoSum3 = (arr, target) => {
-  const numsMap = new Map();
-  for (let i = 0; i < arr.length; i++) {
-    const complement = target - arr[i];
-    if (numsMap.has(complement)) {
-      return [numsMap.get(complement), i];
-    }
-    numsMap.set(arr[i], i);
-  }
-  return null;
-};
+// const findTwoSum3 = (arr, target) => {
+//   const numsMap = new Map();
+//   for (let i = 0; i < arr.length; i++) {
+//     const complement = target - arr[i];
+//     if (numsMap.has(complement)) {
+//       return [numsMap.get(complement), i];
+//     }
+//     numsMap.set(arr[i], i);
+//   }
+//   return null;
+// };
