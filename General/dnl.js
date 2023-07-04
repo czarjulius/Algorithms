@@ -1,5 +1,5 @@
-// const convertToString = (arr)=> '' + arr.map(JSON.stringify).sort()
-// const sortedArray = convertToString([6,3,1,7,3,2,5]).split(',')
+const convertToString = (arr) => '' + arr.map(JSON.stringify).sort();
+const sortedArray = convertToString([6, 3, 1, 7, 3, 2, 5]).split(',');
 // console.log([...new Set(sortedArray)])
 
 // const removeDup = (arr) =>{
