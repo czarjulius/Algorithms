@@ -27,7 +27,7 @@ function parseJSONFromFile(filePath) {
           const jsonData = JSON.parse(data);
           resolve(jsonData);
         } catch (error) {
-          reject(new Error('JSON invalid'));
+          reject(new Error('JSON Invalid'));
         }
       });
     });
