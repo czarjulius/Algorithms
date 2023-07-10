@@ -1,5 +1,9 @@
-const fs = require('fs');
+const fs = require('fs/promises');
 
-const content = fs.readFileSync('./text.txt');
+(async () => {
+  const watcher = fs.watch('./command.txt');
 
-console.log(content.toString('utf-8'), '>>>');
+  for await (const event of watcher) {
+    console.log(event);
+  }
+})();
