@@ -1,43 +1,43 @@
-// /*
-// NOTE: The beginning portion builds our test case linked list. Scroll down to the section titled Our Solution for the code solution!
-//  */
+/*
+NOTE: The beginning portion builds our test case linked list. Scroll down to the section titled Our Solution for the code solution!
+ */
 
-// class ListNode {
-//   constructor(val, next = null) {
-//     this.val = val;
-//     this.next = next;
-//   }
-// }
-// // ---- Generate our linked list ----
-// const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
+class ListNode {
+  constructor(val, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+// ---- Generate our linked list ----
+const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
 
-// // ---- Generate our linked list ----
+// ---- Generate our linked list ----
 
-// const printList = (head) => {
-//   if (!head) {
-//     return;
-//   }
+const printList = (head) => {
+  if (!head) {
+    return;
+  }
 
-//   console.log(head.val);
-//   printList(head.next);
-// };
+  console.log(head.val);
+  printList(head.next);
+};
 
-// // --------- Our solution -----------
+// --------- Our solution -----------
 
-// var reverseList = function (head) {
-//   let prev = null;
-//   let current = head;
+var reverseList = function (head) {
+  let prev = null;
+  let current = head;
 
-//   while (current) {
-//     let nextTemp = current.next;
-//     current.next = prev;
-//     prev = current;
-//     current = nextTemp;
-//   }
+  while (current) {
+    let nextTemp = current.next;
+    current.next = prev;
+    prev = current;
+    current = nextTemp;
+  }
 
-//   return prev;
-// };
+  return prev;
+};
 
-// printList(linkedList);
-// console.log('after reverse');
-// printList(reverseList(linkedList));
+printList(linkedList);
+console.log('after reverse');
+printList(reverseList(linkedList));
