@@ -31,9 +31,9 @@ const dfs = function (currentId, adjList, informTime) {
 
   let max = 0;
   const subordinates = adjList[currentId];
-  for (let i = 0; i < subordinates.length; i++) {
-    max = Math.max(max, dfs(subordinates[i], adjList, informTime));
-  }
+  // for (let i = 0; i < subordinates.length; i++) {
+  //   max = Math.max(max, dfs(subordinates[i], adjList, informTime));
+  // }
 
   return max + informTime[currentId];
 };
