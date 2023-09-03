@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Image Rotation</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <style>
-    img {
-      transition: 0.5s;
-      max-height: 600px;
-    }
+  <head>
+    <title>Image Rotation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      img {
+        transition: 0.5s;
+        max-height: 600px;
+      }
 
-    .rotate{
-      transform: rotate(15deg);
-      position: absolute;
-      top: auto;
-      left: auto;
-    }
+      .rotate {
+        transform: rotate(15deg);
+        position: absolute;
+        top: auto;
+        left: auto;
+      }
 
-    .rotate-negative{
-      transform: rotate(-5deg);
-      position: absolute;
-      top: auto;
-      left: auto;
-    }
+      .rotate-negative {
+        transform: rotate(-5deg);
+        position: absolute;
+        top: auto;
+        left: auto;
+      }
 
-    .top-image:hover{
+      .top-image:hover {
         transform: rotate(0deg);
         transition: 0.5s;
         max-height: 620px;
-    }
-    #container{
+      }
+      #container {
         margin: 0 auto;
         height: 500px;
         width: 30%;
@@ -37,24 +42,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-  </style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <div id="container">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJI-yx2dCcsVf3fYDDRF908iRO_dlTsL9H32iWWIkT_1dYuimsdBUZKTIZgYC61z6Vik&usqp=CAU" id="pic">
-  </div>
+      <!-- <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJI-yx2dCcsVf3fYDDRF908iRO_dlTsL9H32iWWIkT_1dYuimsdBUZKTIZgYC61z6Vik&usqp=CAU"
+        id="pic"
+      /> -->
+    </div>
 
-  <script>
-    const image = document.getElementById("pic");
-    image.classList.add("rotate");
-    const clone = image.cloneNode(true);
-    clone.classList.add("rotate-negative");
-    clone.classList.add("top-image");
-    clone.classList.add("shadow-lg");
-    document.getElementById("container").appendChild(clone);
-
-  </script>
-</body>
+    <script>
+      const image = document.getElementById('pic');
+      image.classList.add('rotate');
+      const clone = image.cloneNode(true);
+      clone.classList.add('rotate-negative');
+      clone.classList.add('top-image');
+      clone.classList.add('shadow-lg');
+      document.getElementById('container').appendChild(clone);
+    </script>
+  </body>
 </html>
