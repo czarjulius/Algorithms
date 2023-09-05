@@ -9,7 +9,7 @@ function maxXor(lo, hi, k) {
       }
     }
   }
-  // return max;
+  return max;
 }
 
 function inventoryList() {
