@@ -9,7 +9,7 @@ class ListNode {
   }
 }
 // ---- Generate our linked list ----
-const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
+// const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
 
 // ---- Generate our linked list ----
 
