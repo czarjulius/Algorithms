@@ -45,4 +45,4 @@ const result = cars.reduce((r, a) => {
 // const a2 = [6, 4, 2];
 // const r = JSON.stringify(a1) === JSON.stringify(a2);
 
-// console.log(r);
+console.log(r);
