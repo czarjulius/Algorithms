@@ -13,5 +13,5 @@ function numWaysStairs(n) {
     ways[i] = ways[i - 1] + ways[i - 2] + ways[i - 3];
   }
 
-  // return ways[n];
+  return ways[n];
 }
