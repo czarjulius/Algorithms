@@ -10,7 +10,6 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-
   push(val) {
     const newNode = new Node(val);
     if (!this.head) {
@@ -87,15 +86,56 @@ class SinglyLinkedList {
     }
     return false;
   }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return !!this.unshift(val);
+    if (index === this.length) return !!this.push(val);
+    let newNode = new Node(val);
+    let prev = this.get(index - 1);
+    let temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index > this.length) return undefined;
+    if (index === this.length - 1) return !!this.pop();
+    if (index === 0) return !!this.shift();
+    let prev = this.get(index - 1);
+    let removed = prev.next;
+    prev.next = removed.next;
+    this.length--;
+    return removed;
+  }
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next;
+    let prev = null;
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
-let list = new SinglyLinkedList();
-list.push('Julius');
-list.push('is');
-list.push('here');
-// list.push('again')
+// let list = new SinglyLinkedList();
+// list.push('Julius');
+// list.push('is');
+// list.push('here');
+// list.push('again');
 // list.push('again')
 // list.traverse()
-list.get(0);
-list.set(0, 'oo');
-list.traverse();
+// list.get(0);
+// list.set(0, 'oo');
+// list.traverse();
 // list.get(0)
+// list.insert(1, 'ngwu')
+// list.traverse()
+// list.remove(2)
+// list.reverse()
+// list.traverse()
