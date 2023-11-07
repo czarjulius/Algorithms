@@ -11,5 +11,5 @@ var isHappy = function (n) {
 
 const sumOfSquare = (n) => {
   const nArr = n.toString().split('');
-  return nArr.reduce((sum, val) => sum + Math.pow(val, 2), 0);
+  // return nArr.reduce((sum, val) => sum + Math.pow(val, 2), 0);
 };
