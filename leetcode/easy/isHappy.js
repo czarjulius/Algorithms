@@ -6,7 +6,7 @@ var isHappy = function (n) {
     seen[n] = true;
     n = sumOfSquare(n);
   }
-  return n === 1 ? true : false;
+  // return n === 1 ? true : false;
 };
 
 const sumOfSquare = (n) => {
