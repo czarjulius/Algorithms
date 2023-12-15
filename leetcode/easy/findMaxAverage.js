@@ -12,7 +12,7 @@ var findMaxAverage = function (nums, k) {
 
     maxAverage = Math.max(maxAverage, temp);
   }
-  // return maxAveraggite / k;
+  return maxAveraggite / k;
 };
 
 // findMaxAverage([1,12,-5,-6,50,3],4)
