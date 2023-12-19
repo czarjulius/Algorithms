@@ -7,5 +7,5 @@ var mySqrt = function (x) {
     if (square <= x) lower = mid + 1;
     else higher = mid - 1;
   }
-  // return higher;
+  return higher;
 };
