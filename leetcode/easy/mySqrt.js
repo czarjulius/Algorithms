@@ -5,7 +5,7 @@ var mySqrt = function (x) {
     const mid = Math.floor((lower + higher) / 2);
     const square = mid * mid;
     if (square <= x) lower = mid + 1;
-    // else higher = mid - 1;
+    else higher = mid - 1;
   }
   return higher;
 };
