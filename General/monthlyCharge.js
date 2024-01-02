@@ -9,6 +9,7 @@ function monthlyCharge(month, subscription, users) {
     const activatedDate = new Date(user.activatedOn);
     const deactivatedDate = user.deactivatedOn ? new Date(user.deactivatedOn) : null;
 
+    // Check if the user is active during the billing month
     return (
       (activatedDate <= lastDay && (!deactivatedDate || deactivatedDate >= firstDay)) ||
       (activatedDate < firstDay && !deactivatedDate)
